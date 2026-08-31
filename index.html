@@ -1,67 +1,119 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Twinkle Adopt — Tiny Besties</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nurul Huda — Display Masjid</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<div class="announcement">✦ free cute packaging for every tiny bestie ✦</div>
-<header>
-  <a class="brand" href="#home">Twinkle <i>Adopt</i> ♡</a>
-  <nav id="nav">
-    <a href="#home">Home</a><a href="#shop">Shop</a><a href="#new">New Arrival</a><a href="#best">Best Seller</a>
-    <a href="#about">About</a><a href="#promo">Promo</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a>
-  </nav>
-  <div class="actions"><button id="searchBtn">⌕</button><button id="wishBtn">♡ <b id="wishCount">0</b></button><button id="cartBtn">🛒 <b id="cartCount">0</b></button><button id="menuBtn">☰</button></div>
-</header>
-<div class="search" id="search"><input id="searchInput" placeholder="Search your tiny bestie..."><span>⌕</span></div>
+  <div class="ambient ambient-1"></div>
+  <div class="ambient ambient-2"></div>
 
-<main>
-<section class="hero" id="home">
- <div class="hero-copy"><p class="eyebrow">♡ tiny besties, big love</p><h1>Adopt Your<br><em>Tiny Bestie</em></h1>
- <p>Meet adorable mini plushies ready to bring soft cuddles, happy moments, and a little sparkle into your day.</p>
- <div class="buttons"><a class="btn dark" href="#shop">Shop now →</a><a class="btn light" href="#about">Our story ♡</a></div>
- <div class="trust">✦ gift-ready &nbsp; ✦ soft & cuddly &nbsp; ✦ happy service</div></div>
- <div class="hero-art"><div class="blob"></div><img src="https://images.pexels.com/photos/4886921/pexels-photo-4886921.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="plush bunny"><span class="sticker">adopt<br><b>me!</b> ♡</span><span class="star">✦</span></div>
-</section>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">☾</div>
+      <div>
+        <div class="brand-name">MASJID NURUL HUDA</div>
+        <div class="brand-sub">Pusat Ibadah & Kebaikan</div>
+      </div>
+    </div>
+    <div class="top-date">
+      <span id="hijriDate">12 Safar 1448 H</span>
+      <span class="dot">•</span>
+      <span id="gregorianDate">Senin, 31 Agustus 2026</span>
+    </div>
+  </header>
 
-<section class="collection">
- <div class="head"><div><p class="eyebrow">meet the family</p><h2>Pick your tiny bestie</h2></div><div><button class="circle" id="prev">←</button><button class="circle" id="next">→</button></div></div>
- <div class="carousel" id="carousel"></div>
-</section>
+  <main class="dashboard">
+    <section class="hero card">
+      <div class="hero-copy">
+        <span class="eyebrow">SELAMAT DATANG</span>
+        <h1>Assalamu'alaikum<br><em>Warahmatullahi Wabarakatuh</em></h1>
+        <p>Semoga setiap langkah menuju masjid menjadi jalan menuju ketenangan dan keberkahan.</p>
+        <div class="hero-actions">
+          <button onclick="showPanel('jadwal')">Jadwal Shalat</button>
+          <button class="ghost" onclick="showPanel('pengumuman')">Pengumuman</button>
+        </div>
+      </div>
+      <div class="mosque-art" aria-label="Ilustrasi masjid">
+        <div class="moon">☾</div>
+        <div class="stars">✦　·　✧　·　✦</div>
+        <div class="dome"></div>
+        <div class="minaret left"></div>
+        <div class="minaret right"></div>
+        <div class="building"></div>
+        <div class="door"></div>
+      </div>
+    </section>
 
-<section class="section" id="shop"><div class="head center"><div><p class="eyebrow">shop little happiness</p><h2>All the cuties</h2></div></div>
- <div class="filters"><button class="filter active" data-cat="all">All</button><button class="filter" data-cat="rabbit">🐰 Rabbit</button><button class="filter" data-cat="duck">🦆 Duck</button><button class="filter" data-cat="bear">🧸 Bear</button><button class="filter" data-cat="monkey">🐒 Monkey</button><button class="filter" data-cat="unicorn">🦄 Unicorn</button></div>
- <div class="grid" id="products"></div>
-</section>
+    <section class="clock card">
+      <span class="label">WAKTU SEKARANG</span>
+      <div id="clock">07:04:00</div>
+      <div id="nextPrayer" class="next">Menuju Dzuhur • <b id="countdown">--:--:--</b></div>
+    </section>
 
-<section class="section split" id="new"><div class="feature-photo"><img src="https://images.pexels.com/photos/6999379/pexels-photo-6999379.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="cute plush"></div><div class="feature-copy"><p class="eyebrow">new arrival ✦</p><h2>Fresh from our<br><em>little cloud</em></h2><p>New tiny friends are landing soon. Keep an eye on this space for limited colors and extra-cute seasonal drops.</p><a class="btn dark" href="#shop">Explore new arrivals →</a></div></section>
+    <section class="prayer card" id="jadwal">
+      <div class="section-head">
+        <div>
+          <span class="label">JADWAL HARI INI</span>
+          <h2>Waktu Shalat</h2>
+        </div>
+        <span class="location">Palembang • WIB</span>
+      </div>
+      <div class="prayer-grid">
+        <div class="prayer-item"><span>☀️</span><b>Subuh</b><strong>04:52</strong></div>
+        <div class="prayer-item"><span>🌤️</span><b>Dzuhur</b><strong>12:08</strong></div>
+        <div class="prayer-item active"><span>🌥️</span><b>Ashar</b><strong>15:22</strong></div>
+        <div class="prayer-item"><span>🌆</span><b>Maghrib</b><strong>18:08</strong></div>
+        <div class="prayer-item"><span>🌙</span><b>Isya</b><strong>19:18</strong></div>
+      </div>
+    </section>
 
-<section class="section best" id="best"><div class="head center"><div><p class="eyebrow">everyone's favorite</p><h2>Best sellers ♡</h2></div></div><div class="grid" id="bestGrid"></div></section>
+    <section class="quran card">
+      <div class="arabic">إِنَّ مَعَ الْعُسْرِ يُسْرًا</div>
+      <div class="translation">“Sesungguhnya bersama kesulitan ada kemudahan.”</div>
+      <div class="reference">QS. Al-Insyirah: 6</div>
+    </section>
 
-<section class="section promo" id="promo"><div><p class="eyebrow">little treat</p><h2>Adopt 2, get<br><em>10% off</em></h2><p>One tiny bestie is cute. Two are even better.</p><a class="btn dark" href="#shop">Shop the promo →</a></div><div class="promo-art">♡<small>10%</small></div></section>
+    <section class="info card">
+      <div class="info-icon">📢</div>
+      <div>
+        <span class="label">PENGUMUMAN</span>
+        <h3 id="announcement">Kajian rutin Ahad ba'da Maghrib</h3>
+        <p>Terbuka untuk jamaah. Mari hadir dan ramaikan majelis ilmu.</p>
+      </div>
+      <button class="mini" onclick="showPanel('pengumuman')">Lihat semua</button>
+    </section>
 
-<section class="section split about" id="about"><div class="about-copy"><p class="eyebrow">our little world</p><h2>Small plushies.<br><em>Sweet memories.</em></h2><p>Twinkle Adopt is a pastel little corner made for finding adorable companions, thoughtful gifts, and tiny moments worth keeping.</p><div class="points"><span>♡ <b>Gift-ready</b><small>Cute packaging for surprises.</small></span><span>✦ <b>Soft & lovely</b><small>Chosen for cuddly moments.</small></span><span>☼ <b>Happy service</b><small>Here to help you find your match.</small></span></div></div><div class="about-card">✿<strong>made with<br>lots of love</strong><span>for every tiny bestie</span></div></section>
+    <section class="bottom-grid">
+      <div class="small-card card">
+        <span class="label">AGENDA TERDEKAT</span>
+        <h3>🕌 Kajian Remaja</h3>
+        <p>Sabtu, 5 September • 19.30 WIB</p>
+      </div>
+      <div class="small-card card">
+        <span class="label">LAYANAN MASJID</span>
+        <div class="service-list">
+          <span>☕ Air minum</span><span>📚 Perpustakaan</span><span>🧕 Ruang muslimah</span>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<section class="section reviews" id="reviews"><div class="head center"><div><p class="eyebrow">tiny love notes</p><h2>Happy adopters</h2></div></div><div class="review-grid"><article>“So cute and tiny! The packaging made my day.”<b>— Alya ♡</b></article><article>“My little bunny is even sweeter in person!”<b>— Naya ✦</b></article><article>“Perfect gift idea. Everything feels so thoughtful.”<b>— Caca ☼</b></article></div></section>
+  <div class="panel" id="panel">
+    <div class="panel-box">
+      <button class="close" onclick="closePanel()">×</button>
+      <span class="label">INFORMASI MASJID</span>
+      <h2 id="panelTitle">Jadwal Shalat</h2>
+      <div id="panelContent"></div>
+    </div>
+  </div>
 
-<section class="section faq" id="faq"><div class="head center"><div><p class="eyebrow">need a little help?</p><h2>FAQ</h2></div></div><div class="faq-list">
-<details><summary>How do I order? <b>+</b></summary><p>Add your favorites to the cart, then press checkout. The order details can be sent directly to WhatsApp.</p></details>
-<details><summary>Can I request gift packaging? <b>+</b></summary><p>Yes! Tell us your gift request through WhatsApp before confirming the order.</p></details>
-<details><summary>Can I ask about stock first? <b>+</b></summary><p>Of course. Use the WhatsApp button and send us the product name you want to check.</p></details>
-</div></section>
-
-<section class="section contact"><div><p class="eyebrow">let's be besties</p><h2>Have a question?<br><em>Say hii ♡</em></h2><p>Need help choosing a tiny bestie? We're happy to help.</p><a id="contactWa" class="btn dark" target="_blank">Chat on WhatsApp →</a></div></section>
-</main>
-
-<footer><div class="brand">Twinkle <i>Adopt</i> ♡</div><span>tiny plushies • big love • happy homes</span><small>© 2026 Twinkle Adopt</small></footer>
-<a class="wa" id="wa" target="_blank">☏<span>Chat with us!</span></a>
-
-<aside class="drawer" id="cartDrawer"><div class="drawer-head"><h3>Your cart ♡</h3><button id="closeCart">×</button></div><div id="cartItems"></div><div class="drawer-foot"><div><span>Total</span><b id="total">Rp0</b></div><button class="btn dark" id="checkout">Checkout via WhatsApp →</button></div></aside>
-<aside class="drawer wishlist" id="wishDrawer"><div class="drawer-head"><h3>Wishlist ♡</h3><button id="closeWish">×</button></div><div id="wishItems"></div></aside>
-<div class="overlay" id="overlay"></div>
-<script src="script.js"></script>
-</body></html>
+  <footer>“Jadikan masjid sebagai tempat pulang bagi hati yang mencari ketenangan.”</footer>
+  <script src="script.js"></script>
+</body>
+</html>
