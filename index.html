@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Twinkle Adopt — tiny plush besties waiting for a forever home.">
+  <title>Twinkle Adopt ♡ Tiny Besties</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio id="bgMusic" loop preload="none"><source src="assets/bgm.mp3" type="audio/mpeg"></audio>
+  <div class="announcement" data-i18n="announcement">✦ free shipping for orders over Rp300K · tiny besties, big happiness ✦</div>
+  <header class="nav-wrap">
+    <nav class="nav container">
+      <a class="logo" href="#home" aria-label="Twinkle Adopt home"><span>twinkle</span> adopt <b>♡</b></a>
+      <div class="nav-links" id="navLinks">
+        <a href="#shop" data-i18n="shop">Shop</a><a href="#about" data-i18n="about">About</a>
+        <a href="#promo" data-i18n="promo">Promo</a><a href="#softness" data-i18n="softness">Softness</a><a href="#reviews" data-i18n="reviews">Reviews</a>
+      </div>
+      <div class="nav-actions">
+        <label class="lang"><span>◎</span><select id="language" aria-label="Language"><option value="id">ID</option><option value="en">EN</option><option value="fr">FR</option></select></label>
+        <button class="music-btn icon-btn" id="musicBtn" aria-label="Play background music" title="Background music">♫</button>
+        <button class="icon-btn" id="cartBtn" aria-label="Open cart">🛒<span class="cart-count" id="cartCount">0</span></button>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero container">
+      <div class="hero-copy">
+        <span class="eyebrow" data-i18n="eyebrow">♡ tiny friends, forever feels</span>
+        <h1 data-i18n-html="heroTitle">Find your<br><em>tiny bestie.</em></h1>
+        <p data-i18n="heroText">Boneka mini yang lembut, manis, dan siap jadi teman kecilmu. Pick a plush, give it a home, and make tiny memories.</p>
+        <div class="hero-search"><span>⌕</span><input id="searchInput" type="search" data-i18n-placeholder="searchPlaceholder" placeholder="where’s my bestie ?" aria-label="Search plushies"></div>
+        <div class="hero-cta"><a class="btn btn-primary" href="#shop" data-i18n="adoptNow">Adopt a bestie ✦</a><a class="btn btn-ghost" href="#about" data-i18n="ourStory">Our little story →</a></div>
+        <div class="mini-stats"><span>♡ <b>5</b> <span data-i18n="bestieTypes">bestie types</span></span><span>✦ <b>4.9/5</b> <span data-i18n="happyAdopters">happy adopters</span></span></div>
+      </div>
+      <div class="hero-art">
+        <div class="blob blob-pink"></div><div class="blob blob-green"></div>
+        <div class="hero-card main-plush"><img src="assets/bunny.svg" alt="Pastel pink bunny plush"></div>
+        <div class="floating-note note-yellow" data-i18n-html="noteSoft">soft<br>& sweet ✿</div><div class="floating-note note-green" data-i18n-html="noteNew">new<br>bestie!</div>
+        <div class="sparkles">✦　✧<br>　♡　✦</div>
+      </div>
+    </section>
+
+    <section class="marquee"><div>✿ CUTE • SOFT • TINY • LOVABLE • CUTE • SOFT • TINY • LOVABLE • </div></section>
+
+    <section class="section container" id="shop">
+      <div class="section-head"><div><span class="eyebrow" data-i18n="collectionEyebrow">meet the collection</span><h2 data-i18n-html="pickTitle">Pick your <em>bestie</em> ♡</h2></div><a href="#shop" class="see-all" data-i18n="viewAll">view all →</a></div>
+      <div class="slider-shell">
+        <button class="slider-btn prev" id="prevBtn" aria-label="Previous">‹</button>
+        <div class="product-track" id="productTrack">
+          <article class="product-card" data-name="blossom bunny bunny rabbit kelinci pink daisy">
+            <div class="product-photo pink-bg"><span class="tag" data-i18n="bestSeller">best seller</span><img src="assets/blossom-bunny.svg" alt="Blossom Bunny — pink bunny with daisy details"></div>
+            <div class="product-info"><div><h3>Blossom Bunny</h3><p data-i18n="bunnyDesc">Bunny · daisy pink</p></div><strong>Rp129K</strong></div><button class="add-btn" data-product="Blossom Bunny" data-price="129000" data-i18n="addBestie">+ add bestie</button>
+          </article>
+          <article class="product-card" data-name="daisy duckie duck bebek yellow daisy">
+            <div class="product-photo yellow-bg"><span class="tag" data-i18n="sunny">sunny</span><img src="assets/daisy-duckie.svg" alt="Daisy Duckie — yellow duck with daisy details"></div>
+            <div class="product-info"><div><h3>Daisy Duckie</h3><p data-i18n="duckDesc">Duck · butter yellow</p></div><strong>Rp119K</strong></div><button class="add-btn" data-product="Daisy Duckie" data-price="119000" data-i18n="addBestie">+ add bestie</button>
+          </article>
+          <article class="product-card" data-name="mochi bear bear beruang cream green">
+            <div class="product-photo cream-bg"><span class="tag" data-i18n="cuddly">cuddly</span><img src="assets/mochi-bear.svg" alt="Mochi Bear — cream bear plush"></div>
+            <div class="product-info"><div><h3>Mochi Bear</h3><p data-i18n="bearDesc">Bear · creamy oat</p></div><strong>Rp139K</strong></div><button class="add-btn" data-product="Mochi Bear" data-price="139000" data-i18n="addBestie">+ add bestie</button>
+          </article>
+          <article class="product-card" data-name="kiwi monkey monkey monyet green mint">
+            <div class="product-photo green-bg"><span class="tag" data-i18n="playful">playful</span><img src="assets/kiwi-monkey.svg" alt="Kiwi Monkey — mint green monkey plush"></div>
+            <div class="product-info"><div><h3>Kiwi Monkey</h3><p data-i18n="monkeyDesc">Monkey · mint green</p></div><strong>Rp135K</strong></div><button class="add-btn" data-product="Kiwi Monkey" data-price="135000" data-i18n="addBestie">+ add bestie</button>
+          </article>
+          <article class="product-card" data-name="twinkle uni unicorn pelangi rainbow pink">
+            <div class="product-photo lilac-bg"><span class="tag" data-i18n="dreamy">dreamy</span><img src="assets/twinkle-uni.svg" alt="Twinkle Uni — pastel rainbow unicorn plush"></div>
+            <div class="product-info"><div><h3>Twinkle Uni</h3><p data-i18n="unicornDesc">Unicorn · pastel rainbow</p></div><strong>Rp149K</strong></div><button class="add-btn" data-product="Twinkle Uni" data-price="149000" data-i18n="addBestie">+ add bestie</button>
+          </article>
+        </div>
+        <button class="slider-btn next" id="nextBtn" aria-label="Next">›</button>
+      </div>
+      <p id="noResults" class="no-results" data-i18n="noResults">No bestie found — try another tiny friend ♡</p>
+    </section>
+
+    <section class="promo-band" id="promo"><div class="container promo-inner"><div><span class="eyebrow" data-i18n="treat">little treat ✦</span><h2 data-i18n-html="promoTitle">Adopt 2, get <em>10% off</em></h2><p data-i18n="promoText">Because besties are better together.</p></div><div class="coupon">TWINKLE10</div><a href="#shop" class="btn btn-dark" data-i18n="shopDeal">shop the deal →</a></div></section>
+
+    <section class="section split container" id="about">
+      <div class="about-art"><div class="about-card"><img src="assets/mochi-bear.svg" alt="Mochi Bear plush"></div><div class="sticker" data-i18n-html="sticker">made with<br>lots of ♡</div></div>
+      <div class="about-copy"><span class="eyebrow" data-i18n="aboutEyebrow">about twinkle adopt</span><h2 data-i18n-html="aboutTitle">Small plushies.<br><em>Big comfort.</em></h2><p data-i18n="aboutP1">Twinkle Adopt lahir dari satu ide sederhana: setiap orang pantas punya tiny bestie yang bisa bikin hari terasa sedikit lebih hangat.</p><p data-i18n="aboutP2">Kami memilih karakter yang cute, warna yang cheerful, dan tekstur yang terasa seperti little cloud. Semua dibuat untuk jadi hadiah kecil, teman meja belajar, atau cuddle buddy favorit.</p><a class="text-link" href="#softness" data-i18n="discover">discover the softness →</a></div>
+    </section>
+
+    <section class="soft-section" id="softness"><div class="container"><div class="section-head"><div><span class="eyebrow" data-i18n="softEyebrow">touchy-feely guide</span><h2 data-i18n-html="softTitle">How soft is your <em>bestie?</em></h2></div></div><div class="soft-grid">
+      <div class="soft-item"><span>01</span><h3 data-i18n="soft1Title">cloud-like fur</h3><p data-i18n="soft1Text">Serat plush lembut dengan feel fluffy untuk pelukan kecil sehari-hari.</p></div>
+      <div class="soft-item"><span>02</span><h3 data-i18n="soft2Title">squishy fill</h3><p data-i18n="soft2Text">Isi ringan dan cozy supaya tetap terasa cuddly tanpa terlalu berat.</p></div>
+      <div class="soft-item"><span>03</span><h3 data-i18n="soft3Title">tiny & huggable</h3><p data-i18n="soft3Text">Ukuran mini yang gampang dibawa ke meja belajar, tas, atau shelf.</p></div>
+    </div></div></section>
+
+    <section class="section container" id="reviews"><div class="section-head"><div><span class="eyebrow" data-i18n="reviewsEyebrow">bestie mail</span><h2 data-i18n-html="reviewsTitle">They’re already <em>obsessed.</em> ✦</h2></div><div class="rating-big">★★★★★ <small>4.9/5</small></div></div>
+      <div class="review-grid">
+        <article class="review"><div class="stars">★★★★★</div><p data-i18n="review1">“Bunny-nya gemes banget! Warnanya soft, fotonya juga cakep banget di meja belajar aku.”</p><b>— Naya · verified adopter</b></article>
+        <article class="review"><div class="stars">★★★★★</div><p data-i18n="review2">“Aku beli buat hadiah dan packaging-nya cute. Si penerima langsung bilang ‘AAAA LUCU’ 😭♡”</p><b>— Rara · verified adopter</b></article>
+        <article class="review"><div class="stars">★★★★★</div><p data-i18n="review3">“Mochi Bear feels super cozy. Sekarang jadi teman kerja mini aku hehe.”</p><b>— Dita · verified adopter</b></article>
+      </div>
+    </section>
+
+    <section class="newsletter"><div class="container newsletter-box"><div><span class="eyebrow" data-i18n="club">join the twinkle club</span><h2 data-i18n-html="newsletterTitle">Little updates, <em>big smiles.</em></h2><p data-i18n="newsletterText">Promo, new besties, and cute little drops.</p></div><form onsubmit="return false"><input type="email" data-i18n-placeholder="emailPlaceholder" placeholder="your email ♡" aria-label="Email"><button class="btn btn-primary" data-i18n="join">join ✦</button></form></div></section>
+  </main>
+
+  <footer><div class="container footer-inner"><div><a class="logo" href="#home"><span>twinkle</span> adopt <b>♡</b></a><p data-i18n="footerTag">tiny besties looking for forever homes.</p></div><div class="footer-links"><a href="#shop" data-i18n="shop">Shop</a><a href="#about" data-i18n="about">About</a><a href="#promo" data-i18n="promo">Promo</a><a href="#reviews" data-i18n="reviews">Reviews</a></div><div class="footer-note" data-i18n="footerNote">made with ♡ for plushie lovers</div></div></footer>
+
+  <a class="wa-float" href="https://wa.me/6282186945438?text=𝘩𝘢𝘪𝘺𝘪𝘦𝘦%20𐙚%20i%20𝘸𝘢𝘯𝘯𝘢%20𝘢𝘥𝘰𝘱𝘵%20𝘢𝘯𝘥%20𝘵𝘢𝘬𝘦%20𝘤𝘢𝘳𝘦%20𝘰𝘧%20𝘵𝘩𝘪𝘴%20𝘵𝘪𝘯𝘺%20𝘣𝘦𝘴𝘵𝘪𝘦%20;" target="_blank" rel="noopener" aria-label="Chat Twinkle Adopt on WhatsApp">◔<span data-i18n="chat">chat with us</span></a>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true"><div class="cart-head"><h2 data-i18n="yourBesties">your besties ♡</h2><button id="closeCart">×</button></div><div id="cartItems" class="cart-items"><p class="empty" data-i18n="emptyCart">Your basket is waiting for a tiny friend ✦</p></div><div class="cart-foot"><div><span data-i18n="subtotal">subtotal</span><strong id="subtotal">Rp0</strong></div><a id="checkoutBtn" class="btn btn-primary full" target="_blank" href="#" data-i18n="checkout">adopt via WhatsApp →</a></div></aside><div class="overlay" id="overlay"></div>
+  <div class="music-hint" id="musicHint" data-i18n="musicHint">Tap ♫ to play your background music</div>
+  <script src="script.js"></script>
+</body>
+</html>
